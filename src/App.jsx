@@ -24,7 +24,12 @@ function App() {
 
 
   const [pop, setPop] = useState(true)
-  const popUp = () => setPop(!pop)
+  const popUp = () => {
+    setPop(!pop)
+    if(!pop){
+      deselectUser()      
+    }
+  }
 
 
   const addUser = (data) => {

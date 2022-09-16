@@ -10,8 +10,7 @@ const UserForm = ({ addUser, userSelect, updateUser, deselectUser, popUp }) => {
     const submit = (data,) => {
         if (userSelect) {
             updateUser(data)
-            deselectUser()
-            clear()
+            onlyClear()
         } else {
             addUser(data)
             clear()
@@ -23,6 +22,16 @@ const UserForm = ({ addUser, userSelect, updateUser, deselectUser, popUp }) => {
             reset(userSelect);
         }
     }, [userSelect]);
+
+    const onlyClear = () => {
+        reset({
+            email: "",
+            password: "",
+            first_name: "",
+            last_name: "",
+            birthday: ""
+        })
+    }
 
     const clear = () => {
         reset({

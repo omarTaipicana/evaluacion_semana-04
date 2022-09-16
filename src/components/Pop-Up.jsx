@@ -6,7 +6,7 @@ const PopUp = ({pop, popUp, userSelect}) => {
             <div className='Pop-Up'>
                 <div className='card-pop'>
                 <i onClick={popUp} className="fa-solid fa-square-check"></i>
-                <p>{userSelect?"User created succesfuly":"User update succesfuly"}</p>
+                <p>{userSelect?"User update succesfuly":"User created succesfuly"}</p>
                 </div>
             </div>
         </div>
